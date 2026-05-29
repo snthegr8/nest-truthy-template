@@ -1,55 +1,36 @@
-# Contributing to Transcriptase
+# Contributing to Nest API Starter
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+We welcome contributions. Please follow these guidelines.
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+## License
 
-## Any contributions you make will be under the MIT Software License
+Contributions are under the same [MIT License](LICENSE) as the project.
 
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+## Report bugs
 
-## Report bugs using Github's [issues](https://github.com/gobeam/truthy/issues)
-
-A relevant coding style guideline is the [Go Code Review Comments](https://code.google.com/p/go-wiki/wiki/CodeReviewComments).
+Use GitHub [issues](../../issues) with steps to reproduce, expected behavior, and environment details.
 
 ## Documentation
 
-If you contribute anything that changes the behavior of the application,
-document it in the follow places as applicable:
+When behavior changes, update:
 
-- the code itself, through clear comments and unit tests
-- [README](README.md)
-
-This includes new features, additional variants of behavior, and breaking
-changes.
+- Code comments and tests where non-obvious
+- [README.md](README.md)
+- [AGENTS.md](AGENTS.md) if architecture or conventions change
 
 ## Testing
 
-[Jest](https://jestjs.io/) is used as testing framework, and are run prior to
-the PR being accepted.
+Run before opening a PR:
 
-## Issues
+```bash
+pnpm test:unit
+pnpm test:e2e
+```
 
-For creating an issue:
+E2E tests require Postgres and Redis (see `docker-compose-test.yml`).
 
-- **Bugs:** please be as thorough as possible, with steps to recreate the issue
-  and any other relevant information.
-- **Feature Requests:** please include functionality and use cases. If this is
-  an extension of a current feature, please include whether or not this would
-  be a breaking change or how to extend the feature with backwards
-  compatibility.
+## Pull requests
 
-If you wish to work on an issue, please assign it to yourself. If you have any
-questions regarding implementation, feel free to ask clarifying questions on
-the issue itself.
-
-## Pull Requests
-
-- should be narrowly focused with no more than 3 or 4 logical commits
-- when possible, address no more than one issue
-- should be reviewable in the GitHub code review tool
-- should be linked to any issues it relates to (i.e. issue number after (#) in commit messages or pull request message)
+- Keep PRs focused; prefer one concern per PR
+- Link related issues in the description
+- Ensure CI passes

@@ -25,11 +25,11 @@ export default class CreateUserSeed {
       .values([
         {
           username: 'admin',
-          email: 'admin@truthy.com',
+          email: 'admin@example.com',
           password:
-            '$2b$10$O9BWip02GuE14bDPfBomQebCjwKQyuUfkulhvBB1UoizOeKxGG8Fu', // Truthy@123
+            '$2b$10$O9BWip02GuE14bDPfBomQebCjwKQyuUfkulhvBB1UoizOeKxGG8Fu', // Truthy@123 (change after first login)
           salt: '$2b$10$O9BWip02GuE14bDPfBomQe',
-          name: 'truthy',
+          name: 'Admin',
           status: UserStatusEnum.ACTIVE,
           roleId: role.id
         }

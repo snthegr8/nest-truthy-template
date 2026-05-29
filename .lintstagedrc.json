@@ -1,4 +1,6 @@
 {
-  "{src,apps,libs,test}/**/*.ts": ["npm run lint"],
-  "./**/*.{ts,js,json,*rc}": ["npm run prettier:write"]
+  "{src,apps,libs,test}/**/*.ts": ["pnpm run lint"],
+  "./**/*.{ts,js,json}": ["prettier --write"],
+  ".prettierrc": ["prettier --write"],
+  ".eslintrc.js": ["prettier --write"]
 }

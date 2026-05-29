@@ -12,7 +12,7 @@ export default {
   exitOnError: false,
   transports: isProduction
     ? new WinstonCloudWatch({
-        name: 'Truthy CMS',
+        name: 'Nest API Starter',
         awsOptions: {
           credentials: {
             accessKeyId:
@@ -36,7 +36,7 @@ export default {
         format: winston.format.combine(
           winston.format.timestamp(),
           winston.format.ms(),
-          nestWinstonModuleUtilities.format.nestLike('Truthy Logger', {
+          nestWinstonModuleUtilities.format.nestLike('Nest API Logger', {
             prettyPrint: true
           })
         )

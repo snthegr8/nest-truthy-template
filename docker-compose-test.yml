@@ -1,13 +1,13 @@
 version: '3'
 services:
-  truthy-postgres:
+  nest-api-postgres:
     image: postgres
     ports:
       - '5432:5432'
     environment:
-      - POSTGRES_USER=truthy_user
-      - POSTGRES_PASSWORD=truthypwd
-      - POSTGRES_DB=truthy_db
+      - POSTGRES_USER=nest_api_user
+      - POSTGRES_PASSWORD=nest_api_pwd
+      - POSTGRES_DB=nest_api_starter_db
 
   redis:
     image: redis

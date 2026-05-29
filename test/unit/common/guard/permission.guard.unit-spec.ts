@@ -38,8 +38,8 @@ describe('Permission guard test', () => {
       mockRole.permission = [mockPermission];
 
       mockUser = new UserEntity();
-      mockUser.name = 'truthy';
-      mockUser.username = 'truthy';
+      mockUser.name = 'test-user';
+      mockUser.username = 'test-user';
       mockUser.role = mockRole;
 
       mockSwitchToHttp = {

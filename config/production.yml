@@ -6,7 +6,7 @@ db:
   host: ''
   type: ''
   port: 5432
-  database: 'truthy'
+  database: 'nest_api_starter'
   synchronize: false
 
 jwt:
@@ -15,10 +15,10 @@ jwt:
   cookieExpiresIn: 604800
 
 app:
-  name: 'Truthy'
-  version: 'v0.1'
-  description: 'Official Truthy API'
-  appUrl: 'https://truthy-backend.herokuapp.com/'
+  name: 'Nest API Starter'
+  version: 'v1.0'
+  description: 'NestJS API starter template'
+  appUrl: 'http://localhost:7777'
   frontendUrl: 'http://localhost:3000'
 
 mail:
@@ -26,12 +26,12 @@ mail:
   port: 2525
   user: ''
   pass: ''
-  from: 'truthycms'
-  fromMail: 'truthycms@gmail.com'
+  from: 'nest-api-starter'
+  fromMail: 'noreply@example.com'
   preview: true
   secure: false
   ignoreTLS: true
-  queueName: 'truthy-mail'
+  queueName: 'nest-api-mail'
 
 queue:
   driver: 'redis'

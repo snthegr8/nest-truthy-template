@@ -117,7 +117,7 @@ describe('AuthService', () => {
     it('forgot password with email', async () => {
       userRepository.findOne.mockResolvedValue(mockUser);
       const forgetPasswordDto: ForgetPasswordDto = {
-        email: 'truthycms@gmail.com'
+        email: 'noreply@example.com'
       };
       await service.forgotPassword(forgetPasswordDto);
       expect(mockUser.save).toHaveBeenCalledTimes(1);
@@ -143,8 +143,8 @@ describe('AuthService', () => {
       let resetPasswordDto: ResetPasswordDto;
       beforeEach(() => {
         resetPasswordDto = {
-          password: 'Truthy@123',
-          confirmPassword: 'Truthy@123',
+          password: 'Starter@123',
+          confirmPassword: 'Starter@123',
           token: 'Aer23C'
         };
       });
@@ -169,9 +169,9 @@ describe('AuthService', () => {
         beforeEach(() => {
           jest.clearAllMocks();
           changePasswordDto = {
-            oldPassword: 'Truthy@prev',
-            password: 'Truthy@123',
-            confirmPassword: 'Truthy@123'
+            oldPassword: 'Starter@prev',
+            password: 'Starter@123',
+            confirmPassword: 'Starter@123'
           };
 
           user = new UserEntity();

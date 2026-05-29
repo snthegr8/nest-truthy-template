@@ -1,30 +1,29 @@
-FROM node:14-alpine As development
+FROM node:16-alpine AS development
+
+RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
 
 WORKDIR /usr/src/app
 
-# COPY package*.json ./
-COPY package.json ./
+COPY package.json pnpm-lock.yaml .npmrc ./
 
-COPY yarn.lock ./
-
-RUN yarn install
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN yarn build
+RUN pnpm build
 
-FROM node:14-alpine As production
+FROM node:16-alpine AS production
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
+RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
+
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY package.json pnpm-lock.yaml .npmrc ./
 
-COPY yarn.lock ./
-
-RUN yarn install --production
+RUN pnpm install --prod --frozen-lockfile
 
 COPY . .
 

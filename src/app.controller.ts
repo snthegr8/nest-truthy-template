@@ -12,7 +12,8 @@ export class AppController {
   @Get('')
   index() {
     return {
-      message: 'hello world'
+      name: 'Nest API Starter',
+      status: 'ok'
     };
   }
 }

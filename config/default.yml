@@ -8,34 +8,34 @@ db:
   port: 5432
   username: 'postgres'
   password: 'root'
+  database: 'nest_api_starter'
   synchronize: false
 
 jwt:
-  # expiresIn: 10
   expiresIn: 900
   refreshExpiresIn: 604800
   cookieExpiresIn: 604800
 
 app:
   fallbackLanguage: 'en'
-  name: 'Truthy'
-  version: 'v0.1'
-  description: 'Official Truthy API'
+  name: 'Nest API Starter'
+  version: 'v1.0'
+  description: 'NestJS API starter template'
   appUrl: 'http://localhost:7777'
   frontendUrl: 'http://localhost:3000'
   sameSite: true
 
 mail:
-  host: 'smtp.mailtrap.io'
+  host: ''
   port: 2525
-  user: 'f4a511d60957e6'
-  pass: '7522797b96cef0'
-  from: 'truthycms'
-  fromMail: 'truthycms@gmail.com'
+  user: ''
+  pass: ''
+  from: 'nest-api-starter'
+  fromMail: 'noreply@example.com'
   preview: true
   secure: false
   ignoreTLS: true
-  queueName: 'truthy-mail'
+  queueName: 'nest-api-mail'
 
 queue:
   driver: 'redis'
@@ -56,12 +56,11 @@ throttle:
     blockDuration: 3000
 
 twofa:
-  authenticationAppNAme: 'truthy'
+  authenticationAppNAme: 'nest-api-starter'
 
 winston:
-  groupName: 'truthy'
-  streamName: 'truthy-stream'
+  groupName: 'nest-api-starter'
+  streamName: 'nest-api-starter-stream'
   awsAccessKeyId: ''
   awsSecretAccessKey: ''
   awsRegion: ''
-  

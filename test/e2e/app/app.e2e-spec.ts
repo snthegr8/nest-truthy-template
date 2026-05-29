@@ -18,7 +18,7 @@ describe('AppController (e2e)', () => {
     return request(app.instance.getHttpServer())
       .get('/')
       .expect(200)
-      .expect({ message: 'hello world' });
+      .expect({ name: 'Nest API Starter', status: 'ok' });
   });
 
   afterAll(async () => {
